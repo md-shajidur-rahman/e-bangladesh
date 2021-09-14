@@ -5,8 +5,12 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>FakeStore</title>
+  <title>E-Bangladesh</title>
   <link rel="stylesheet" href="./css/style.css" />
+
+  <!-- Tailwind -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
     integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous" />
@@ -18,23 +22,27 @@
 </head>
 
 <body>
-  <header></header>
-  <main class="main">
-    <div class="search-field">
-      <div class="search-box">
-        <input id="input-field" class="search-field" type="text" />
-        <button type="button" class="btn btn-primary search-button" data-toggle="button" aria-pressed="false"
-          autocomplete="off" id="search-btn" onclick="loadProducts()">
-          Search
-        </button>
-      </div>
-    </div>
+  <header>
+        <!-- Search Area -->
+        <div class="text-center mx-auto mb-5 bg-success p-5" style="--bs-bg-opacity: .3;">
+          <h1 class="text-center text-primary">E-Bangladesh</h1>
+          <!-- Input Box -->
+          <div class="d-flex w-50 mx-auto">
+              <input type="text" class="form-control me-2" id="search-field" placeholder="Write Your Items Name">
+              <button onclick="loadProducts()" class="btn btn-dark" id="search-btn">Search</button>
+          </div>
+        </div>
+  </header>
+
+  <!-- Cart Area -->
+  <section>
+    <!-- All the products list -->
     <div class="row">
       <div class="col-md-9 col-lg-9 col-sm-7" id="all-products">
-        <!-- <div  class="">
-          <h1></h1>
-        </div> -->
+
       </div>
+
+      <!-- Shopping summery on the cart -->
       <div class="col-md-3 col-lg-3 col-sm-5 cart-main">
         <div class="cart" id="my-cart">
           <table class="table">
@@ -82,10 +90,10 @@
           <div class="parces text-center">
             <button class="btn btn-primary text-center">Buy Now</button>
           </div>
+          </div>
         </div>
       </div>
-    </div>
-  </main>
+    </section>
   <footer></footer>
 
   <!-- add javascript  file  -->
